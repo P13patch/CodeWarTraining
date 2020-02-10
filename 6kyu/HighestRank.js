@@ -14,24 +14,22 @@ function highestRank(arr){
         }
         
     }
-        console.log(collection)
         let objEntries = Object.entries(collection)
         let greatPair = objEntries[0]
-        console.log(greatPair)
        for (let pair of objEntries) {
     
            if (pair[1] > greatPair[1]) {
                greatPair = pair
            }
            else if (pair[1] == greatPair[1]) {
-               
+               if (pair[0] > greatPair[0]) {
+                   greatPair = pair
+               }
 
            }
            
-          
        }
-       console.log(greatPair)
-
+       return parseInt(greatPair[0])
     }
 
 
